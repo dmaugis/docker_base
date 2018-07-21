@@ -1,0 +1,11 @@
+--- PyQt5_gpl-5.10.1/configure.py	2018-02-27 11:43:42.000000000 +0100
++++ PyQt5_gpl-5.10.1.new/configure.py	2018-07-19 18:20:29.000000000 +0200
+@@ -2265,7 +2265,7 @@
+     is to be used.  If it is None then the mode is taken from the target
+     configuration.  uses_sip_h is set if the test program uses sip.h.
+     """
+-
++    return None
+     metadata = MODULE_METADATA[mname]
+ 
+     # The derived file names.
