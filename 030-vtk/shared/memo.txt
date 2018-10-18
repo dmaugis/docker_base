@@ -1,0 +1,1 @@
+root@9b35e0f4ab83:/tmp/VTK-8.1.1/build.2.7.15# cp ../CMake/vtkPythonWrapping.cmake /shared/

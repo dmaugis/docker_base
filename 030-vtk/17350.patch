@@ -1,0 +1,13 @@
+diff -Naur VTK-8.1.1/Wrapping/PythonCore/vtkPythonArgs.cxx VTK-8.1.1.new/Wrapping/PythonCore/vtkPythonArgs.cxx
+--- VTK-8.1.1/Wrapping/PythonCore/vtkPythonArgs.cxx	2018-10-03 09:20:24.039116104 +0200
++++ VTK-8.1.1/Wrapping/PythonCore/vtkPythonArgs.cxx.17350	2018-10-03 09:23:18.796214421 +0200
+@@ -102,7 +102,8 @@
+   else if (PyUnicode_Check(o))
+   {
+ #if PY_VERSION_HEX >= 0x03030000
+-    a = PyUnicode_AsUTF8(o);
++    //a = PyUnicode_AsUTF8(o);
++    a = const_cast<char*>(PyUnicode_AsUTF8(o));
+     return true;
+ #else
+     PyObject *s = _PyUnicode_AsDefaultEncodedString(o, nullptr);
