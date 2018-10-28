@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-cd /tmp
 
 echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
@@ -14,13 +13,9 @@ apt-get install -y --no-install-recommends wget curl unzip tar
 # allows easier doc of bash scripts
 cd /usr/local/bin/
 wget https://github.com/Sylvain303/docopts/releases/download/v0.6.3-alpha1/docopts
+chmod a+x  docopts
 
-rm /var/cache/locate/locatedb && true
 rm -rf /var/lib/apt/lists/*
 
 apt list --installed
-
-
-
-
 
