@@ -7,7 +7,7 @@ add-apt-repository ppa:alex-p/tesseract-ocr
 apt-get update
 apt-get install -y tesseract-ocr libtesseract-dev libleptonica-dev
 apt-get install -y tesseract-ocr-eng
-apt-get install -y tesseract-ocr-fra
+#apt-get install -y tesseract-ocr-fra
 #apt install -y tesseract-ocr-all 
 pyenv global 3.7.0
 pip install --no-cache-dir pytesseract

@@ -15,11 +15,7 @@ print("Successfully installed vtk v. {}".format(vtk.vtkVersion.GetVTKSourceVersi
 import pytesseract
 print("Successfully installed pytesseract v. {}".format(pytesseract.get_tesseract_version()))
 
-try:
-    import caffe
-    print("Successfully installed pycaffe")
-except:
-    print("Error: pycaffe not installed ! (python3?)")
-
+import cv2
+print("Successfully installed OpenCV v. {}".format(cv2.__version__))
 
 

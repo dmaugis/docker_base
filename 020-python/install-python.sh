@@ -59,7 +59,7 @@ pip3.7 install seaborn
 pip3.7 install bokeh
 pip3.7 install plotly
 pip3.7 install jupyter
-pip3.7 install enum34 
+#pip3.7 install enum34 
 pip3.7 install visdom dominate
 pip3.7 install setuptools
 pip3.7 install protobuf
