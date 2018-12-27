@@ -36,8 +36,8 @@ git submodule update --init --recursive
 python2.7 setup.py install
 
 cd ~ 
-python2.7 -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
-python2.7 -c 'from caffe2.python import workspace; print(workspace.NumCudaDevices())'
+#python2.7 -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
+#python2.7 -c 'from caffe2.python import workspace; print(workspace.NumCudaDevices())'
 
 rm -rf /var/lib/apt/lists/*
 

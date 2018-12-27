@@ -56,11 +56,11 @@ pip3.7 install scikit-learn
 pip3.7 install pandas
 pip3.7 install matplotlib
 pip3.7 install seaborn
-pip3.7 install bokeh
-pip3.7 install plotly
+#pip3.7 install bokeh
+#pip3.7 install plotly
 pip3.7 install jupyter
 #pip3.7 install enum34 
-pip3.7 install visdom dominate
+#pip3.7 install visdom dominate
 pip3.7 install setuptools
 pip3.7 install protobuf
 
@@ -77,12 +77,12 @@ pip2.7 install scikit-learn
 pip2.7 install pandas
 pip2.7 install matplotlib
 pip2.7 install seaborn
-pip2.7 install bokeh
-pip2.7 install plotly
+#pip2.7 install bokeh
+#pip2.7 install plotly
 pip2.7 install jupyter
 pip2.7 install enum34 
 pip2.7 install future
-pip2.7 install visdom dominate
+#pip2.7 install visdom dominate
 pip2.7 install setuptools
 pip2.7 install protobuf
 

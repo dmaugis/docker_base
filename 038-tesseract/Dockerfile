@@ -1,4 +1,4 @@
-FROM dmaugis/vtk8	
+FROM dmaugis/cgal4	
 
 # install opencv3.4.2.sh
 COPY install-tesseract.sh /tmp/

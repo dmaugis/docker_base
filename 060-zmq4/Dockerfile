@@ -1,4 +1,4 @@
-FROM dmaugis/pcl1.8.1
+FROM dmaugis/pcl1
 
 # install install-zmq4.2.5.sh
 COPY install-zmq4.2.5.sh /tmp/

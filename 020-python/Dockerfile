@@ -1,4 +1,4 @@
-FROM dmaugis/ceres
+FROM dmaugis/ceres1
 
 COPY install-python.sh /tmp/
 RUN  /tmp/install-python.sh  

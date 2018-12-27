@@ -1,14 +1,15 @@
 #!/bin/bash 
 
 apt-get update -y 
-apt-get install -y libxt-dev libgl1-mesa-dev
+#apt-get install -y libxt-dev libgl1-mesa-dev 
+#apt-get install -y libqt5x11extras5-dev qttools5-dev
 
 export PATH=$PATH:/root/.pyenv/plugins/pyenv-virtualenv/shims:/root/.pyenv/shims:/root/.pyenv/bin
 
 cd /tmp
  
 # get vtk8
-git clone --branch 'v8.2.0.rc2'  https://github.com/Kitware/VTK.git  VTK-8.2.0.rc2
+git clone --progress --verbose --branch 'v8.2.0.rc2'  https://github.com/Kitware/VTK.git  VTK-8.2.0.rc2
 cd VTK-8.2.0.rc2
 
 # Build Fails for 8.1.1 with Python 3.7 Wrapping
@@ -23,9 +24,9 @@ pyenv rehash
 
 mkdir build.3.7.0 
 cd build.3.7.0
+#      -DQt5_DIR:PATH=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5 \
 
 cmake -DVTK_QT_VERSION:STRING=5 \
-      -DQt5_DIR:PATH=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5 \
       -DVTK_Group_Qt:BOOL=ON \
       -DVTK_Group_Imaging:BOOL=ON \
       -DVTK_Group_Views:BOOL=ON \
@@ -61,9 +62,9 @@ pyenv rehash
 
 mkdir build.2.7.15 
 cd build.2.7.15
+#     -DQt5_DIR:PATH=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5 \
 
 cmake -DVTK_QT_VERSION:STRING=5 \
-      -DQt5_DIR:PATH=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5 \
       -DVTK_Group_Qt:BOOL=ON \
       -DVTK_Group_Imaging:BOOL=ON \
       -DVTK_Group_Views:BOOL=ON \
@@ -96,8 +97,9 @@ cd /tmp/VTK-8.2.0.rc2
 mkdir build
 cd build
 
+#       -DQt5_DIR:PATH=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5 \
+
 cmake -DVTK_QT_VERSION:STRING=5 \
-      -DQt5_DIR:PATH=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5 \
       -DVTK_Group_Qt:BOOL=ON \
       -DVTK_Group_Imaging:BOOL=ON \
       -DVTK_Group_Views:BOOL=ON \
@@ -116,7 +118,7 @@ make -j4 all
 make install 
 
 # why oh why ?
-ldconfig /usr/local/Qt/5.11/5.11.1/lib/
+#ldconfig /usr/local/Qt/5.11/5.11.1/lib/
 
 cd /tmp
 rm -rf /var/lib/apt/lists/*

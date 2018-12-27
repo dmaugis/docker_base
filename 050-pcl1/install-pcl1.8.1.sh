@@ -20,7 +20,7 @@ cd ../build_pcl2.7.15
 
 cmake -D Qt5Concurrent_DIR=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5Concurrent \
       -D Qt5OpenGL_DIR=/usr/local/Qt/5.11/5.11.1/lib/cmake/Qt5OpenGL \
-      -D VTK_DIR=/usr/local/vtk/8.1/8.1.1/lib/cmake/vtk-8.1/ \
+      -D VTK_DIR=/usr/local/vtk/8.2/8.2.0.rc2/lib/cmake/vtk-8.2 \
       -D WITH_CUDA=ON \
       -D WITH_OPENGL=ON \
       -D WITH_QT=ON \

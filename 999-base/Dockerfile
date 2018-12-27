@@ -1,4 +1,4 @@
-FROM dmaugis/ceres1	
+FROM dmaugis/zmq4	
 
 
 

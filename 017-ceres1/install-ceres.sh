@@ -20,14 +20,7 @@ apt-get update && apt-get install -y --no-install-recommends \
 
 cd /tmp
 
-#Eigen (Required)
-hg clone https://bitbucket.org/eigen/eigen#3.2
-mkdir eigen_build && cd eigen_build
-cmake . ../eigen
-make &&  make install
-cd ..
-
-#Ceres (Required)
+#Ceres
 #git clone https://ceres-solver.googlesource.com/ceres-solver ceres-solver
 git clone -b 1.14.x https://ceres-solver.googlesource.com/ceres-solver
 
@@ -40,10 +33,10 @@ make -j2 &&  make install
 cp -Rf bin /usr/local/bin/ceres
 cd ..
 
-cd ..
-
 rm -Rf /tmp/ceres*
-rm -Rf /tmp/eigen*
 rm -rf /var/lib/apt/lists/*
+rm /tmp/install-ceres.sh
+pkg-installed
+
 
 

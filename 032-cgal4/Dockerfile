@@ -1,8 +1,8 @@
-FROM dmaugis/zmq4
+FROM dmaugis/openmesh7
 
 COPY install-cgal.sh /tmp/
 RUN  /tmp/install-cgal.sh  
-RUN  rm /tmp/install-cgal.sh
+
 
 
 

@@ -11,7 +11,7 @@ RUN rm /tmp/*.patch
 ADD  info.py info.py
 ADD  info.sh info.sh
 ENV  PATH=/root/.pyenv/plugins/pyenv-virtualenv/shims:/root/.pyenv/shims:/root/.pyenv/bin:$PATH
-CMD ["./info.sh"]
+#CMD ["./info.sh"]
 
 
 
